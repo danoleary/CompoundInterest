@@ -4,12 +4,9 @@ open System
 open Xunit
 open Xunit.Abstractions
 open CompoundInterestService.LoanMatcher
-open CompoundInterestService.LoanCalculator
-open CompoundInterestService.LoanResponder
+open CompoundInterestService.Types
+open TestHelpers
 
-let listsMatch expected actual =
-    let compareLists = List.compareWith Operators.compare
-    compareLists actual expected = 0
 
 type SomeTests(output: ITestOutputHelper) =
 
@@ -20,9 +17,10 @@ type SomeTests(output: ITestOutputHelper) =
                 {Name = "Bob";  Rate=0.075; Available=640.0;}
             ]
         let loanAmount = 500.0
-        let result = matchLendersToLoan availableLenders loanAmount
+        let loanLengthInYears = 10.0
+        let result = matchLendersToLoan availableLenders loanAmount loanLengthInYears
         let expectedResult = [
-            { Lender = "Bob"; Rate = 0.075; Amount = 500.0 }
+            { Lender = "Bob"; Rate = 0.075; LoanAmount = 500.0; LoanLenthInYears = loanLengthInYears; }
         ]
         Assert.True(listsMatch result expectedResult)
 
@@ -35,12 +33,13 @@ type SomeTests(output: ITestOutputHelper) =
                 {Name = "Faye";  Rate=0.062; Available=100.0;}
             ]
         let loanAmount = 400.0
-        let result = matchLendersToLoan availableLenders loanAmount
+        let loanLengthInYears = 10.0
+        let result = matchLendersToLoan availableLenders loanAmount loanLengthInYears
         output.WriteLine("Some function returned {0}", result)
         let expectedResult = [
-            { Lender = "Bob"; Rate=0.075; Amount = 200.0 };
-            { Lender = "Faye"; Rate=0.062; Amount = 100.0 };
-            { Lender = "Dan"; Rate=0.050; Amount = 100.0 };
+            { Lender = "Bob"; Rate=0.075; LoanAmount = 200.0; LoanLenthInYears = loanLengthInYears };
+            { Lender = "Faye"; Rate=0.062; LoanAmount = 100.0; LoanLenthInYears = loanLengthInYears };
+            { Lender = "Dan"; Rate=0.050; LoanAmount = 100.0; LoanLenthInYears = loanLengthInYears };
         ]
         Assert.True(listsMatch result expectedResult)
 

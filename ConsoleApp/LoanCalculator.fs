@@ -3,22 +3,7 @@ namespace CompoundInterestService
 module LoanCalculator =
 
     open System
-
-    type LoanCalculationParams = 
-        {
-            Lender: string;
-            LoanAmount: float;
-            Rate: float;
-            LoanLenthInYears: float;
-        }
-
-    type LoanCalculationResponse = 
-        {
-            LoanAmount: float
-            Rate: float
-            MonthlyRepayment: float
-            TotalRepayment: float
-        }
+    open Types
 
     let calculateLoan (loanParams: LoanCalculationParams) =
         let numberOfMonthsInYear = 12.0
@@ -33,11 +18,4 @@ module LoanCalculator =
             MonthlyRepayment = monthlyRepayment;
             TotalRepayment = roundedTotalRepayment;
         }
-    
-    let combineLoans loans =
-        {
-            LoanAmount = loans |> List.sumBy (fun x -> x.LoanAmount);
-            Rate = 0.0;
-            MonthlyRepayment = loans |> List.sumBy (fun x -> x.MonthlyRepayment);
-            TotalRepayment = loans |> List.sumBy (fun x -> x.TotalRepayment);
-        }
+ 

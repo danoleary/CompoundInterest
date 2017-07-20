@@ -4,6 +4,7 @@ open System
 open Xunit
 
 open CompoundInterestService.LoanCalculator
+open CompoundInterestService.Types
 
 [<Fact>]
 let ``loan calculation is correct`` () =
@@ -11,6 +12,7 @@ let ``loan calculation is correct`` () =
     let rate = 0.05
     let loanParams = 
         {
+            Lender = "someone";
             LoanAmount = loanAmount;
             Rate = rate;
             LoanLenthInYears = 10.0;

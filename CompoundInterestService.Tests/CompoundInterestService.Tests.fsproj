@@ -1,29 +1,29 @@
 <Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
+    <FscToolPath>C:\Program Files (x86)\Microsoft SDKs\F#\4.1\Framework\v4.0</FscToolPath>
+    <FscToolExe>fsc.exe</FscToolExe>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ConsoleApp\ConsoleApp.fsproj" />
   </ItemGroup>
-
   <ItemGroup>
+    <Compile Include="TestHelpers.fs" />
+    <Compile Include="WeightedMeanCalculatorTests.fs" />
     <Compile Include="LoanCalculatorTests.fs" />
-    <Compile Include="LoanResponderTests.fs" />
-     <Compile Include="LoanMatcherTests.fs" />
+    <Compile Include="LoanViabilityTesterTests.fs" />
+    <Compile Include="LoanMatcherTests.fs" />
+    <Compile Include="LoanCombinerTests.fs" />
+    <Compile Include="LenderRepositoryTests.fs" />
+    <Compile Include="LoanRequestMarshallerTests.fs" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />
+    <PackageReference Include="FSharp.Data" Version="2.3.3" />
     <PackageReference Include="FSharp.NET.Sdk" Version="1.0.*" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170427-09" />
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
   </ItemGroup>
-
-  
-
 </Project>

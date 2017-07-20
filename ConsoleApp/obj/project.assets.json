@@ -55,6 +55,15 @@
           }
         }
       },
+      "FSharp.Data/2.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/FSharp.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net40/FSharp.Data.dll": {}
+        }
+      },
       "FSharp.NET.Sdk/1.0.5": {
         "type": "package",
         "dependencies": {
@@ -1358,6 +1367,42 @@
         "lib/xamarinmac20/FSharp.Core.xml",
         "runtimes/any/native/FSharp.Core.optdata",
         "runtimes/any/native/FSharp.Core.sigdata"
+      ]
+    },
+    "FSharp.Data/2.3.3": {
+      "sha512": "RwBtaWbOjWUBpyID2VrE3m2vgJtUR3IjcSWR98SwKo6IpCehhkn4HTc/n72ETc2F2+Nt6+6rxjnQpmL8xLjP8Q==",
+      "type": "package",
+      "path": "fsharp.data/2.3.3",
+      "files": [
+        "fsharp.data.2.3.3.nupkg.sha512",
+        "fsharp.data.nuspec",
+        "lib/net40/FSharp.Data.DesignTime.dll",
+        "lib/net40/FSharp.Data.DesignTime.pdb",
+        "lib/net40/FSharp.Data.DesignTime.xml",
+        "lib/net40/FSharp.Data.dll",
+        "lib/net40/FSharp.Data.pdb",
+        "lib/net40/FSharp.Data.xml",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.DesignTime.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.DesignTime.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.DesignTime.xml",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8/FSharp.Data.xml",
+        "lib/portable-net45+netcore45/FSharp.Data.DesignTime.dll",
+        "lib/portable-net45+netcore45/FSharp.Data.DesignTime.pdb",
+        "lib/portable-net45+netcore45/FSharp.Data.DesignTime.xml",
+        "lib/portable-net45+netcore45/FSharp.Data.dll",
+        "lib/portable-net45+netcore45/FSharp.Data.pdb",
+        "lib/portable-net45+netcore45/FSharp.Data.xml",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.DesignTime.dll",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.DesignTime.pdb",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.DesignTime.xml",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.dll",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.pdb",
+        "lib/portable-net45+sl50+netcore45/FSharp.Data.xml",
+        "linqpad-samples/GitHub.linq",
+        "linqpad-samples/Jira.linq",
+        "linqpad-samples/TypeInference.linq"
       ]
     },
     "FSharp.NET.Sdk/1.0.5": {
@@ -4454,6 +4499,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "FSharp.Core >= 4.1.*",
+      "FSharp.Data >= 2.3.3",
       "FSharp.NET.Sdk >= 1.0.*",
       "Microsoft.NETCore.App >= 2.0.0-preview1-002111-00"
     ]
@@ -4488,6 +4534,10 @@
           "FSharp.Core": {
             "target": "Package",
             "version": "4.1.*"
+          },
+          "FSharp.Data": {
+            "target": "Package",
+            "version": "2.3.3"
           },
           "FSharp.NET.Sdk": {
             "suppressParent": "All",
