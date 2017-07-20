@@ -1,8 +1,0 @@
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\bin\Debug\netcoreapp2.0\ConsoleApp.deps.json
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\bin\Debug\netcoreapp2.0\ConsoleApp.runtimeconfig.json
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\bin\Debug\netcoreapp2.0\ConsoleApp.runtimeconfig.dev.json
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\bin\Debug\netcoreapp2.0\ConsoleApp.dll
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\bin\Debug\netcoreapp2.0\ConsoleApp.pdb
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\obj\Debug\netcoreapp2.0\ConsoleApp.fsproj.CoreCompileInputs.cache
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\obj\Debug\netcoreapp2.0\ConsoleApp.dll
-C:\Users\DOLear01\Documents\GitHub\CompoundInterest\ConsoleApp\obj\Debug\netcoreapp2.0\ConsoleApp.pdb
