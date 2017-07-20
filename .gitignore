@@ -1,0 +1,6 @@
+obj/
+.vs/
+CompoundInterestService.Tests/bin
+CompoundInterestService.Tests/obj
+ConsoleApp/bin
+ConsoleApp/obj

@@ -6,17 +6,17 @@
     <FscToolExe>fsc.exe</FscToolExe>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp\ConsoleApp.fsproj" />
+    <ProjectReference Include="..\CompoundInterestCalculator\CompoundInterestCalculator.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TestHelpers.fs" />
     <Compile Include="WeightedMeanCalculatorTests.fs" />
-    <Compile Include="LoanCalculatorTests.fs" />
-    <Compile Include="LoanViabilityTesterTests.fs" />
-    <Compile Include="LoanMatcherTests.fs" />
-    <Compile Include="LoanCombinerTests.fs" />
+    <Compile Include="CalculatorTests.fs" />
+    <Compile Include="ViabilityTesterTests.fs" />
+    <Compile Include="MatcherTests.fs" />
+    <Compile Include="CombinerTests.fs" />
     <Compile Include="LenderRepositoryTests.fs" />
-    <Compile Include="LoanRequestMarshallerTests.fs" />
+    <Compile Include="RequestMarshallerTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FSharp.Core" Version="4.1.*" />

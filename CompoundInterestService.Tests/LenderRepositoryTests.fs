@@ -2,13 +2,13 @@ module LenderRepositoryTests
 
 open System
 open Xunit
-open CompoundInterestService.LenderRepository
+open CompoundInterestCalculator.LenderRepository
 open TestHelpers
-open CompoundInterestService.Types
+open CompoundInterestCalculator.Types
 
 [<Fact>]
 let ``given a valid file path then the contents of the csv is returned as a list of lenders`` () =
-    let result = getLenders "C:\\Users\\DOLear01\\Documents\\GitHub\\CompoundInterest\\ConsoleApp\\Market Data for Exercise.csv"
+    let result = getLenders "C:\\Users\\DOLear01\\Documents\\GitHub\\CompoundInterest\\CompoundInterestCalculator\\Market Data for Exercise.csv"
     let expectedResult = [
             {Name = "Bob";  Rate=0.075; Available=640.0;}
             {Name = "Jane";  Rate=0.069; Available=480.0;}

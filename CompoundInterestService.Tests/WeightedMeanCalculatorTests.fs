@@ -2,8 +2,8 @@ module LoanRequestAccepterTests
 
 open System
 open Xunit
-open CompoundInterestService.Types
-open CompoundInterestService.WeightedMeanCalculator
+open CompoundInterestCalculator.Types
+open CompoundInterestCalculator.WeightedMeanCalculator
 
 [<Fact>]
 let ``correct weighted mean is calculated`` () =
